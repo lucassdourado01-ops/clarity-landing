@@ -19,41 +19,390 @@
 
   <!-- Navigation -->
   <nav class="nav" aria-label="Main navigation">
+    <div class="nav__container">
+      <a href="#hero" class="nav__logo">Clarity</a>
+
+      <ul class="nav__links" role="list">
+        <li><a href="#features" class="nav__link">Features</a></li>
+        <li><a href="#how-it-works" class="nav__link">How It Works</a></li>
+        <li><a href="#testimonials" class="nav__link">Testimonials</a></li>
+        <li><a href="#pricing" class="nav__link">Pricing</a></li>
+      </ul>
+
+      <div class="nav__actions">
+        <a href="#pricing" class="btn btn--accent btn--sm" data-open-modal>Start Free</a>
+      </div>
+
+      <button class="nav__hamburger" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div class="nav__mobile-menu" role="dialog" aria-label="Mobile navigation">
+      <ul class="nav__mobile-links" role="list">
+        <li><a href="#features" class="nav__link">Features</a></li>
+        <li><a href="#how-it-works" class="nav__link">How It Works</a></li>
+        <li><a href="#testimonials" class="nav__link">Testimonials</a></li>
+        <li><a href="#pricing" class="nav__link">Pricing</a></li>
+      </ul>
+      <a href="#pricing" class="btn btn--accent btn--full" data-open-modal>Start Free</a>
+    </div>
   </nav>
 
   <main>
     <!-- Hero -->
     <section id="hero" class="hero">
+      <div class="hero__container">
+        <p class="hero__eyebrow">Spreadsheet Replacement for Modern Teams</p>
+        <h1 class="hero__heading">
+          Stop Managing Data.<br>
+          <span class="hero__typewriter" aria-live="polite"></span><span class="hero__cursor" aria-hidden="true"></span>
+        </h1>
+        <p class="hero__sub">Clarity replaces your team's tangled spreadsheets with a real-time, collaborative workspace built for mid-sized businesses — without the enterprise price tag.</p>
+        <div class="hero__cta-group">
+          <a href="#pricing" class="btn btn--accent btn--lg" data-open-modal>Start for Free</a>
+          <a href="#how-it-works" class="btn btn--ghost btn--lg">See How It Works</a>
+        </div>
+        <p class="hero__trust">No credit card required &nbsp;·&nbsp; Free forever plan &nbsp;·&nbsp; Setup in 5 minutes</p>
+      </div>
     </section>
 
     <!-- Social Proof -->
     <section id="social-proof" class="social-proof">
+      <div class="container">
+        <div class="social-proof__grid">
+          <div class="social-proof__item animate-on-scroll animate-on-scroll--fade">
+            <span class="social-proof__number">10,000+</span>
+            <span class="social-proof__label">Teams worldwide</span>
+          </div>
+          <div class="social-proof__item animate-on-scroll animate-on-scroll--fade">
+            <span class="social-proof__number">98%</span>
+            <span class="social-proof__label">Customer satisfaction</span>
+          </div>
+          <div class="social-proof__item animate-on-scroll animate-on-scroll--fade">
+            <span class="social-proof__number">4.9/5</span>
+            <span class="social-proof__label">Average rating</span>
+          </div>
+          <div class="social-proof__item animate-on-scroll animate-on-scroll--fade">
+            <span class="social-proof__number">&lt; 5 min</span>
+            <span class="social-proof__label">Average onboarding time</span>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Features -->
     <section id="features" class="features">
+      <div class="container">
+        <div class="section__header animate-on-scroll">
+          <h2 class="section__heading">Everything Your Team Needs</h2>
+          <p class="section__sub">Built for the workflows that spreadsheets were never designed to handle.</p>
+        </div>
+        <div class="features__grid">
+
+          <div class="features__card animate-on-scroll">
+            <div class="features__icon" aria-hidden="true">⚡</div>
+            <h3 class="features__title">Real-Time Collaboration</h3>
+            <p class="features__body">Every edit, comment, and update is synced instantly across your entire team. No more emailing spreadsheet versions back and forth. Everyone always works on the same source of truth.</p>
+          </div>
+
+          <div class="features__card animate-on-scroll">
+            <div class="features__icon" aria-hidden="true">∑</div>
+            <h3 class="features__title">Smart Formulas</h3>
+            <p class="features__body">Write in plain English or use our formula assistant to build complex calculations in seconds. Clarity automatically suggests corrections and explains what each formula does.</p>
+          </div>
+
+          <div class="features__card animate-on-scroll">
+            <div class="features__icon" aria-hidden="true">🔒</div>
+            <h3 class="features__title">Role-Based Access</h3>
+            <p class="features__body">Control exactly who can view, edit, or export every table, column, and row. Finance sees finance. Sales sees sales. Your data stays where it belongs.</p>
+          </div>
+
+          <div class="features__card animate-on-scroll">
+            <div class="features__icon" aria-hidden="true">📊</div>
+            <h3 class="features__title">One-Click Reports</h3>
+            <p class="features__body">Turn any view into a polished PDF or shareable dashboard link instantly. Scheduled reports land in stakeholder inboxes automatically — no manual exports required.</p>
+          </div>
+
+        </div>
+      </div>
     </section>
 
     <!-- How It Works -->
     <section id="how-it-works" class="how-it-works">
+      <div class="container">
+        <div class="section__header animate-on-scroll">
+          <h2 class="section__heading">How Clarity Works</h2>
+          <p class="section__sub">Three steps from sign-up to a fully migrated, collaborative workspace.</p>
+        </div>
+        <div class="how-it-works__steps">
+
+          <div class="how-it-works__step animate-on-scroll">
+            <div class="how-it-works__number" aria-hidden="true">1</div>
+            <h3 class="how-it-works__title">Connect Your Data</h3>
+            <p class="how-it-works__body">Import your existing spreadsheets from Excel or Google Sheets in one click. Clarity reads your structure and automatically detects column types, relationships, and formulas.</p>
+          </div>
+
+          <div class="how-it-works__step animate-on-scroll">
+            <div class="how-it-works__number" aria-hidden="true">2</div>
+            <h3 class="how-it-works__title">Invite Your Team</h3>
+            <p class="how-it-works__body">Add teammates by email and assign roles in under a minute. Clarity sends onboarding nudges so your team is productive from day one — no training sessions required.</p>
+          </div>
+
+          <div class="how-it-works__step animate-on-scroll">
+            <div class="how-it-works__number" aria-hidden="true">3</div>
+            <h3 class="how-it-works__title">Work Without Limits</h3>
+            <p class="how-it-works__body">Collaborate in real time, build reports, set automations, and share insights — all inside Clarity. Your spreadsheet days are officially over.</p>
+          </div>
+
+        </div>
+      </div>
     </section>
 
     <!-- Testimonials -->
     <section id="testimonials" class="testimonials">
+      <div class="container">
+        <div class="section__header animate-on-scroll">
+          <h2 class="section__heading">Trusted by Teams Like Yours</h2>
+          <p class="section__sub">Here's what mid-sized business leaders say after switching to Clarity.</p>
+        </div>
+        <div class="testimonials__grid">
+
+          <div class="testimonials__card animate-on-scroll">
+            <div class="testimonials__stars" aria-label="5 out of 5 stars">
+              <span aria-hidden="true">★★★★★</span>
+            </div>
+            <blockquote class="testimonials__quote">
+              <p>"We replaced 14 shared Google Sheets with one Clarity workspace. The time we've saved on weekly reporting alone paid for the Pro plan in the first month. I genuinely can't believe we waited this long."</p>
+            </blockquote>
+            <div class="testimonials__author">
+              <div class="testimonials__avatar" aria-hidden="true">JM</div>
+              <div>
+                <p class="testimonials__name">Jordan Mills</p>
+                <p class="testimonials__role">Head of Operations, Fieldstone Co.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonials__card animate-on-scroll">
+            <div class="testimonials__stars" aria-label="5 out of 5 stars">
+              <span aria-hidden="true">★★★★★</span>
+            </div>
+            <blockquote class="testimonials__quote">
+              <p>"The role-based access was the feature that sold our CFO. Sensitive salary data in the same platform as the marketing team's campaign tracker — and nobody sees what they shouldn't. That's exactly what we needed."</p>
+            </blockquote>
+            <div class="testimonials__author">
+              <div class="testimonials__avatar" aria-hidden="true">PS</div>
+              <div>
+                <p class="testimonials__name">Priya Sharma</p>
+                <p class="testimonials__role">Finance Director, Luminar Health</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonials__card animate-on-scroll">
+            <div class="testimonials__stars" aria-label="5 out of 5 stars">
+              <span aria-hidden="true">★★★★★</span>
+            </div>
+            <blockquote class="testimonials__quote">
+              <p>"Onboarding 40 people sounds terrifying but Clarity's invite flow is genuinely the best I've ever used. Our team was running their own reports within a week. Zero IT involvement."</p>
+            </blockquote>
+            <div class="testimonials__author">
+              <div class="testimonials__avatar" aria-hidden="true">MW</div>
+              <div>
+                <p class="testimonials__name">Marcus Webb</p>
+                <p class="testimonials__role">CEO, Trellworth Solutions</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </section>
 
     <!-- Pricing -->
     <section id="pricing" class="pricing">
+      <div class="container">
+        <div class="section__header animate-on-scroll">
+          <h2 class="section__heading">Simple, Transparent Pricing</h2>
+          <p class="section__sub">No hidden fees. No per-seat surprises. Start free and grow when you're ready.</p>
+        </div>
+
+        <div class="pricing__toggle-wrapper">
+          <div class="pricing__toggle">
+            <span class="pricing__toggle-label pricing__toggle-label--active" id="toggle-monthly">Monthly</span>
+            <button
+              class="pricing__toggle-btn"
+              role="switch"
+              aria-checked="false"
+              aria-labelledby="toggle-monthly toggle-annual"
+            ><span class="pricing__toggle-thumb"></span></button>
+            <span class="pricing__toggle-label" id="toggle-annual">
+              Annual
+              <span class="pricing__toggle-save">Save 20%</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="pricing__grid">
+
+          <div class="pricing__card animate-on-scroll">
+            <h3 class="pricing__tier">Starter</h3>
+            <div class="pricing__price">
+              <span class="pricing__amount">$0</span>
+              <span class="pricing__period">/month</span>
+            </div>
+            <p class="pricing__users">Up to 5 users</p>
+            <ul class="pricing__features" role="list">
+              <li class="pricing__feature"><span class="pricing__check" aria-hidden="true">✓</span> 5 workspaces</li>
+              <li class="pricing__feature"><span class="pricing__check" aria-hidden="true">✓</span> Real-time collaboration</li>
+              <li class="pricing__feature"><span class="pricing__check" aria-hidden="true">✓</span> 100 MB storage</li>
+              <li class="pricing__feature"><span class="pricing__check" aria-hidden="true">✓</span> Basic formulas</li>
+              <li class="pricing__feature"><span class="pricing__check" aria-hidden="true">✓</span> Community support</li>
+              <li class="pricing__feature"><span class="pricing__check" aria-hidden="true">✓</span> CSV import/export</li>
+            </ul>
+            <a href="#" class="btn btn--ghost btn--full" data-open-modal>Start for Free</a>
+          </div>
+
+          <div class="pricing__card pricing__card--pro animate-on-scroll">
+            <div class="pricing__badge">Most Popular</div>
+            <h3 class="pricing__tier">Pro</h3>
+            <div class="pricing__price">
+              <span class="pricing__amount" data-monthly="$29" data-annual="$23">$29</span>
+              <span class="pricing__period" data-monthly="/month" data-annual="/mo">/month</span>
+            </div>
+            <p class="pricing__annual-note" hidden>Billed annually ($276/yr)</p>
+            <p class="pricing__users">Up to 50 users</p>
+            <ul class="pricing__features" role="list">
+              <li class="pricing__feature"><span class="pricing__check" aria-hidden="true">✓</span> Unlimited workspaces</li>
+              <li class="pricing__feature"><span class="pricing__check" aria-hidden="true">✓</span> Real-time collaboration</li>
+              <li class="pricing__feature"><span class="pricing__check" aria-hidden="true">✓</span> 50 GB storage</li>
+              <li class="pricing__feature"><span class="pricing__check" aria-hidden="true">✓</span> Smart formulas + AI assist</li>
+              <li class="pricing__feature"><span class="pricing__check" aria-hidden="true">✓</span> Role-based access control</li>
+              <li class="pricing__feature"><span class="pricing__check" aria-hidden="true">✓</span> One-click PDF reports</li>
+              <li class="pricing__feature"><span class="pricing__check" aria-hidden="true">✓</span> Email &amp; chat support</li>
+              <li class="pricing__feature"><span class="pricing__check" aria-hidden="true">✓</span> Everything in Starter</li>
+            </ul>
+            <a href="#" class="btn btn--accent btn--full" data-open-modal>Start Pro Trial</a>
+          </div>
+
+          <div class="pricing__card animate-on-scroll">
+            <h3 class="pricing__tier">Enterprise</h3>
+            <div class="pricing__price">
+              <span class="pricing__amount">Custom</span>
+              <span class="pricing__period"> pricing</span>
+            </div>
+            <p class="pricing__users">Unlimited users</p>
+            <ul class="pricing__features" role="list">
+              <li class="pricing__feature"><span class="pricing__check" aria-hidden="true">✓</span> Unlimited everything</li>
+              <li class="pricing__feature"><span class="pricing__check" aria-hidden="true">✓</span> SSO &amp; SAML integration</li>
+              <li class="pricing__feature"><span class="pricing__check" aria-hidden="true">✓</span> Advanced audit logs</li>
+              <li class="pricing__feature"><span class="pricing__check" aria-hidden="true">✓</span> Custom data retention</li>
+              <li class="pricing__feature"><span class="pricing__check" aria-hidden="true">✓</span> Dedicated account manager</li>
+              <li class="pricing__feature"><span class="pricing__check" aria-hidden="true">✓</span> SLA guarantee</li>
+              <li class="pricing__feature"><span class="pricing__check" aria-hidden="true">✓</span> On-premise deployment option</li>
+              <li class="pricing__feature"><span class="pricing__check" aria-hidden="true">✓</span> Everything in Pro</li>
+            </ul>
+            <a href="mailto:sales@clarity.app" class="btn btn--ghost btn--full">Contact Sales</a>
+          </div>
+
+        </div>
+      </div>
     </section>
 
     <!-- Final CTA -->
     <section id="cta" class="cta-final">
+      <div class="container">
+        <div class="cta-final__inner animate-on-scroll">
+          <h2 class="cta-final__heading">Your spreadsheet era is over.</h2>
+          <p class="cta-final__sub">Join 10,000+ teams that made the switch. Set up your first Clarity workspace in minutes — completely free.</p>
+          <div class="cta-final__cta-group">
+            <a href="#pricing" class="btn btn--accent btn--lg" data-open-modal>Start for Free — No Card Needed</a>
+            <a href="mailto:sales@clarity.app" class="btn btn--ghost btn--lg">Talk to Sales</a>
+          </div>
+          <p class="cta-final__legal">By signing up you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+        </div>
+      </div>
     </section>
   </main>
 
   <!-- Footer -->
   <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+
+        <div class="footer__brand">
+          <span class="footer__logo">Clarity</span>
+          <p class="footer__tagline">The smarter way to work with data.</p>
+        </div>
+
+        <div class="footer__col">
+          <p class="footer__col-heading">Product</p>
+          <nav aria-label="Product links">
+            <a href="#" class="footer__link">Features</a>
+            <a href="#" class="footer__link">How It Works</a>
+            <a href="#" class="footer__link">Pricing</a>
+            <a href="#" class="footer__link">Changelog</a>
+          </nav>
+        </div>
+
+        <div class="footer__col">
+          <p class="footer__col-heading">Company</p>
+          <nav aria-label="Company links">
+            <a href="#" class="footer__link">About</a>
+            <a href="#" class="footer__link">Blog</a>
+            <a href="#" class="footer__link">Careers</a>
+            <a href="#" class="footer__link">Press</a>
+          </nav>
+        </div>
+
+        <div class="footer__col">
+          <p class="footer__col-heading">Legal</p>
+          <nav aria-label="Legal links">
+            <a href="#" class="footer__link">Privacy Policy</a>
+            <a href="#" class="footer__link">Terms of Service</a>
+            <a href="#" class="footer__link">Cookie Policy</a>
+            <a href="#" class="footer__link">Security</a>
+          </nav>
+        </div>
+
+      </div>
+      <p class="footer__copy">© 2026 Clarity, Inc. All rights reserved.</p>
+    </div>
   </footer>
+
+  <!-- Sign-up Modal -->
+  <div class="modal-overlay" id="signup-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close modal">✕</button>
+
+      <div class="modal__body">
+        <div class="modal__icon" aria-hidden="true">✦</div>
+        <h2 class="modal__title" id="modal-title">Start for Free</h2>
+        <p class="modal__sub">No credit card required. Set up in 5 minutes.</p>
+
+        <form class="modal__form" novalidate>
+          <div class="modal__field">
+            <label class="modal__label" for="modal-name">Full name</label>
+            <input class="modal__input" type="text" id="modal-name" name="name" placeholder="Jordan Mills" autocomplete="name" required>
+          </div>
+          <div class="modal__field">
+            <label class="modal__label" for="modal-email">Work email</label>
+            <input class="modal__input" type="email" id="modal-email" name="email" placeholder="jordan@company.com" autocomplete="email" required>
+          </div>
+          <button type="submit" class="btn btn--accent btn--full modal__submit">Create Free Account</button>
+        </form>
+
+        <div class="modal__success" hidden>
+          <div class="modal__success-icon" aria-hidden="true">✓</div>
+          <h3 class="modal__success-title">You're in!</h3>
+          <p class="modal__success-sub">Check your inbox for your magic sign-in link. Welcome to Clarity.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="js/main.js" defer></script>
 </body>

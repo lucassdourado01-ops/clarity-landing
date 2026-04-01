@@ -6,6 +6,38 @@
 
 ---
 
+## 0. Build Progress
+
+Track implementation status. Update this section as each piece is completed.
+
+### Files
+| File | Status |
+|---|---|
+| `index.html` | ✅ Skeleton created, Nav markup complete |
+| `css/reset.css` | ✅ Complete |
+| `css/variables.css` | ✅ All 50+ tokens defined |
+| `css/styles.css` | ✅ Complete — all sections styled |
+| `js/main.js` | ✅ 7 init functions: nav scroll, mobile menu, smooth scroll, animations (staggered), typewriter, modal, pricing toggle |
+| `assets/` | ✅ Directory created (no assets required — CSS-only visuals) |
+| Git | ✅ Initialized, initial commit on `master` |
+
+### Sections
+| # | Section | HTML | CSS | JS |
+|---|---|---|---|---|
+| 1 | Navigation (`<nav>`) | ✅ | ✅ | ✅ |
+| 2 | Hero (`#hero`) | ✅ | ✅ | — |
+| 3 | Social Proof (`#social-proof`) | ✅ | ✅ | — |
+| 4 | Features (`#features`) | ✅ | ✅ | — |
+| 5 | How It Works (`#how-it-works`) | ✅ | ✅ | — |
+| 6 | Testimonials (`#testimonials`) | ✅ | ✅ | — |
+| 7 | Pricing (`#pricing`) | ✅ | ✅ | — |
+| 8 | Final CTA (`#cta`) | ✅ | ✅ | — |
+| 9 | Footer (`<footer>`) | ✅ | ✅ | — |
+
+> **Legend:** ✅ Done · 🔄 Partial · ⬜ Not started · — Not applicable
+
+---
+
 ## 1. Project Overview & Goal
 
 **Product name:** Clarity
@@ -14,7 +46,7 @@
 
 **Goal of this landing page:** Convert mid-sized business decision-makers (ops managers, finance leads, CEOs) into free-trial sign-ups or demo requests. The page must communicate clarity of value, trust, and ease of adoption.
 
-**Design philosophy:** Dark mode only, premium SaaS aesthetic, high contrast, no gradients on backgrounds (flat dark surfaces), subtle purple accent system. The page must feel calm and confident — not flashy.
+**Design philosophy:** Dark mode only, premium SaaS aesthetic, high contrast, no gradients on backgrounds (flat dark surfaces), subtle green accent system. The page must feel calm and confident — not flashy.
 
 **No frameworks.** No React, Vue, Angular, Tailwind, Bootstrap, or any CSS/JS framework of any kind. Everything is hand-crafted vanilla HTML, CSS, and JavaScript.
 
@@ -62,9 +94,9 @@ Define all of the following inside `:root { }` in `css/variables.css`. No other 
 | `--color-surface` | `#13131A` | Cards, nav bar, footer, input fields |
 | `--color-surface-raised` | `#1C1C27` | Hover states on cards, modals |
 | `--color-border` | `#2A2A3D` | Subtle dividers, card borders, input borders |
-| `--color-accent` | `#6C63FF` | Primary CTA buttons, active states, highlights |
-| `--color-accent-hover` | `#857DFF` | Hover state for accent-colored elements |
-| `--color-accent-muted` | `rgba(108, 99, 255, 0.15)` | Accent tint backgrounds (feature icons, badges) |
+| `--color-accent` | `#22C55E` | Primary CTA buttons, active states, highlights |
+| `--color-accent-hover` | `#4ADE80` | Hover state for accent-colored elements |
+| `--color-accent-muted` | `rgba(34, 197, 94, 0.15)` | Accent tint backgrounds (feature icons, badges) |
 | `--color-text-primary` | `#F0F0FF` | Headings, primary body text |
 | `--color-text-secondary` | `#A0A0B8` | Subheadings, supporting copy, labels |
 | `--color-text-disabled` | `#505068` | Placeholders, disabled elements |
@@ -143,7 +175,7 @@ Use an 8px base grid.
 | `--shadow-sm` | `0 1px 3px rgba(0, 0, 0, 0.4)` |
 | `--shadow-md` | `0 4px 16px rgba(0, 0, 0, 0.5)` |
 | `--shadow-lg` | `0 8px 32px rgba(0, 0, 0, 0.6)` |
-| `--shadow-accent` | `0 4px 24px rgba(108, 99, 255, 0.3)` |
+| `--shadow-accent` | `0 4px 24px rgba(34, 197, 94, 0.3)` |
 
 ### 3.7 Transition Tokens
 
@@ -191,11 +223,10 @@ Use an 8px base grid.
 - Class: `nav__link`. Color: `var(--color-text-secondary)`. On hover: `var(--color-text-primary)`. Transition: `var(--transition-fast)`.
 
 **Right side:**
-- "Sign In" link: `nav__link nav__link--signin`. Same color as nav links.
-- "Start Free" CTA button: `btn btn--accent btn--sm`. Text: "Start Free". Href: `#pricing`.
+- "Start Free" CTA button: `btn btn--accent btn--sm`. Text: "Start Free". Has `data-open-modal` attribute — opens sign-up modal on click. No "Sign In" link.
 
 **Mobile menu:**
-- On screens `< 768px`: hide center links and "Sign In". Show hamburger button (`nav__hamburger`).
+- On screens `< 768px`: hide center links. Show hamburger button (`nav__hamburger`).
 - Hamburger: three horizontal bars (`<span>` elements), color `var(--color-text-primary)`.
 - When hamburger is clicked (JS), add `nav--open` class to `<nav>`. This reveals a full-width dropdown (`nav__mobile-menu`) absolutely positioned below the nav bar, background `var(--color-surface)`, containing all nav links stacked vertically plus the "Start Free" button.
 - Hamburger transforms to an X when `nav--open` is active.
@@ -693,22 +724,24 @@ Toggle `nav--open` class on `<nav>` when hamburger button is clicked. When `nav-
 For all anchor tags whose `href` starts with `#`, prevent default and use `window.scrollTo({ top: targetElement.offsetTop - 72, behavior: 'smooth' })`. The `72` is `NAV_HEIGHT` (define as a constant).
 
 **4. `initAnimations()`**
-Use `IntersectionObserver` with threshold `0.15`. Observe all elements with class `animate-on-scroll`. When they intersect, add class `is-visible`.
+Use `IntersectionObserver` with threshold `0.1`. Observe all elements with class `animate-on-scroll`. When they intersect, add class `is-visible`. Automatically apply `--stagger-delay` CSS custom property (increments of 90ms) to sibling `.animate-on-scroll` elements within the same parent.
 
-In CSS:
-```css
-.animate-on-scroll {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity var(--transition-slow), transform var(--transition-slow);
-}
-.animate-on-scroll.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-```
+Directional variants via modifier classes:
+- `.animate-on-scroll` — fade up (default)
+- `.animate-on-scroll--left` — fade from left
+- `.animate-on-scroll--right` — fade from right
+- `.animate-on-scroll--fade` — fade only (no transform)
 
-Apply `animate-on-scroll` class to: all `.features__card`, all `.how-it-works__step`, all `.testimonials__card`, all `.pricing__card`.
+Apply `animate-on-scroll` to: `.features__card`, `.how-it-works__step`, `.testimonials__card`, `.pricing__card`, `.section__header`, `.social-proof__item` (with `--fade`), `.cta-final__inner`, pricing toggle wrapper.
+
+**5. `initTypewriter()`**
+Cycles through phrases in the hero `<h1>` with a typing/deleting animation.
+
+**6. `initModal()`**
+Opens `#signup-modal` overlay when any element with `data-open-modal` attribute is clicked. Features: focus trap, ESC-to-close, backdrop-click-to-close, form validation (name + email required), success state after submit. Uses `hidden` attribute + `is-open` CSS class for transition.
+
+**7. `initPricingToggle()`**
+Toggles the `.pricing__toggle-btn` switch between monthly and annual billing. Updates all `[data-monthly]` / `[data-annual]` elements with the appropriate value and shows/hides the `.pricing__annual-note` element. Pro card: $29/mo → $23/mo (annual, billed as $276/yr).
 
 ### Performance Rules
 
